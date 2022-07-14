@@ -19,12 +19,20 @@ let removeAll = document.querySelector('#removeAll')
 ///////////
 
 input1.style.width = "351px"
+input1.style.height = "30px"
+input1.style.fontSize = '25px'
 add.style.backgroundColor = 'green'
 add.style.color = "white";
 remove.style.backgroundColor = '#E1AD01'
 removeAll.style.backgroundColor = '#A40000'
 removeAll.style.color = 'white'
+document.body.style.backgroundColor = 'black'
 
+// puts everything in the center of the page
+
+
+
+document.body.style.textAlign = 'center'
 
 //////////////////
 // event listeners
@@ -55,15 +63,21 @@ form.addEventListener('submit', function (event) {
         if (listItem.style.textDecoration === '') {
             listItem.style.textDecoration = 'line-through'
         } else { listItem.style.textDecoration = '' }
+        listItem.style.textDecorationColor = "red"
     })
-    // add item to ul
+    // add item to document
     document.body.appendChild(listItem);
     // clear out our input text when we add items to the list
     input1.value = ''
     // adds CSS to every added item to the list
+    listItem.style.marginLeft = 'auto';
+    listItem.style.marginRight = 'auto';
+    listItem.style.height = '40px'
+    listItem.style.fontSize = '30px'
     listItem.style.border = '1px solid black'
     listItem.style.width = "351px"
     listItem.style.marginTop = "2px"
+    listItem.style.color = "white"
 })
 
 ////////////////////////////////////////////
@@ -71,13 +85,15 @@ form.addEventListener('submit', function (event) {
 // remove completed tasks
 remove.addEventListener('click', function (event) {
     event.preventDefault()
+    console.log('click')
     let listAll = document.querySelectorAll('div')
     console.log(listAll)
-    for (let item of listAll) {
-        if (item.style.textDecoration === 'line-through') {
-            item.remove();
+        for (let item of listAll) {
+            // I have to change this because my color was red!!!!
+            if (item.style.textDecorationColor === 'red') {
+                item.remove();
+            }
         }
-    }
 })
 
 
