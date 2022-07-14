@@ -18,14 +18,20 @@ let removeAll = document.querySelector('#removeAll')
 // css
 ///////////
 
-input1.style.width = "351px"
+input1.style.width = "500px"
 input1.style.height = "30px"
 input1.style.fontSize = '25px'
 add.style.backgroundColor = 'green'
 add.style.color = "white";
+add.style.height = '40px';
+add.style.fontSize = '20px'
 remove.style.backgroundColor = '#E1AD01'
+remove.style.height = "40px"
+remove.style.fontSize = '20px'
 removeAll.style.backgroundColor = '#A40000'
-removeAll.style.color = 'white'
+removeAll.style.color = 'white';
+removeAll.style.height = '40px';
+removeAll.style.fontSize = '20px'
 document.body.style.backgroundColor = 'black'
 
 // puts everything in the center of the page
@@ -75,7 +81,7 @@ form.addEventListener('submit', function (event) {
     listItem.style.height = '40px'
     listItem.style.fontSize = '30px'
     listItem.style.border = '1px solid black'
-    listItem.style.width = "351px"
+    listItem.style.width = "500px"
     listItem.style.marginTop = "2px"
     listItem.style.color = "white"
 })
