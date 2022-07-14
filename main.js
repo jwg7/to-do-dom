@@ -35,9 +35,6 @@ removeAll.style.fontSize = '20px'
 document.body.style.backgroundColor = 'black'
 
 // puts everything in the center of the page
-
-
-
 document.body.style.textAlign = 'center'
 
 //////////////////
