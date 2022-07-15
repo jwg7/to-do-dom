@@ -34,6 +34,8 @@ removeAll.style.height = '40px';
 removeAll.style.fontSize = '20px'
 document.body.style.backgroundColor = 'black'
 
+
+
 // puts everything in the center of the page
 document.body.style.textAlign = 'center'
 
@@ -74,6 +76,14 @@ form.addEventListener('submit', function (event) {
             } else { listItem.style.textDecoration = '' }
 
         })
+        //  add delete button next to every item on your list
+        // let deleteButton = document.createElement('button');
+        // deleteButton.innerText = "Delete";
+        // listItem.appendChild(deleteButton)
+        // deleteButton.addEventListener('click', function(){
+        //     listItem.remove()
+        // })
+
         // add item to document
         document.body.appendChild(listItem);
         // clear out our input text when we add items to the list
@@ -88,9 +98,9 @@ form.addEventListener('submit', function (event) {
         listItem.style.marginTop = "2px"
         listItem.style.color = "white"
     } else {
-        alert('Please enter in an item')
+        // alert('Please enter in an item!')
     }
-    })
+})
 
 ////////////////////////////////////////////
 
