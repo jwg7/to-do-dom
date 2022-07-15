@@ -93,7 +93,6 @@ form.addEventListener('submit', function (event) {
         listItem.style.marginRight = 'auto';
         listItem.style.height = '40px'
         listItem.style.fontSize = '30px'
-        listItem.style.border = '1px solid black'
         listItem.style.width = "500px"
         listItem.style.marginTop = "2px"
         listItem.style.color = "white"
