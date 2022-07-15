@@ -56,33 +56,41 @@ document.body.style.textAlign = 'center'
 //alternate way
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    // create new element
-    let listItem = document.createElement('div');
-    //set the text of the newly created element
-    listItem.innerText = input1.value;
-    //  allows us to click items and put a line through them
-    listItem.addEventListener('click', function () {
-        console.log(listItem.innerText)
-        if (listItem.style.textDecoration === '') {
-            listItem.style.textDecoration = 'line-through'
-            listItem.style.textDecorationColor = "red"
-        } else { listItem.style.textDecoration = '' }
-        
+
+    if (input1.value.length !== 0) {
+
+
+
+        // create new element
+        let listItem = document.createElement('div');
+        //set the text of the newly created element
+        listItem.innerText = input1.value;
+        //  allows us to click items and put a line through them
+        listItem.addEventListener('click', function () {
+            console.log(listItem.innerText)
+            if (listItem.style.textDecoration === '') {
+                listItem.style.textDecoration = 'line-through'
+                listItem.style.textDecorationColor = "red"
+            } else { listItem.style.textDecoration = '' }
+
+        })
+        // add item to document
+        document.body.appendChild(listItem);
+        // clear out our input text when we add items to the list
+        input1.value = ''
+        // adds CSS to every added item to the list
+        listItem.style.marginLeft = 'auto';
+        listItem.style.marginRight = 'auto';
+        listItem.style.height = '40px'
+        listItem.style.fontSize = '30px'
+        listItem.style.border = '1px solid black'
+        listItem.style.width = "500px"
+        listItem.style.marginTop = "2px"
+        listItem.style.color = "white"
+    } else {
+        alert('Please enter in an item')
+    }
     })
-    // add item to document
-    document.body.appendChild(listItem);
-    // clear out our input text when we add items to the list
-    input1.value = ''
-    // adds CSS to every added item to the list
-    listItem.style.marginLeft = 'auto';
-    listItem.style.marginRight = 'auto';
-    listItem.style.height = '40px'
-    listItem.style.fontSize = '30px'
-    listItem.style.border = '1px solid black'
-    listItem.style.width = "500px"
-    listItem.style.marginTop = "2px"
-    listItem.style.color = "white"
-})
 
 ////////////////////////////////////////////
 
