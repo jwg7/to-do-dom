@@ -65,8 +65,9 @@ form.addEventListener('submit', function (event) {
         console.log(listItem.innerText)
         if (listItem.style.textDecoration === '') {
             listItem.style.textDecoration = 'line-through'
+            listItem.style.textDecorationColor = "red"
         } else { listItem.style.textDecoration = '' }
-        listItem.style.textDecorationColor = "red"
+        
     })
     // add item to document
     document.body.appendChild(listItem);
@@ -91,12 +92,12 @@ remove.addEventListener('click', function (event) {
     console.log('click')
     let listAll = document.querySelectorAll('div')
     console.log(listAll)
-        for (let item of listAll) {
-            // I have to change this because my color was red!!!!
-            if (item.style.textDecorationColor === 'red') {
-                item.remove();
-            }
+    for (let item of listAll) {
+        // I have to change this because my color was red!!!!
+        if (item.style.textDecorationColor === 'red') {
+            item.remove();
         }
+    }
 })
 
 
